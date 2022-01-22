@@ -1,25 +1,15 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
-
+import Algobut from "./components/Algobut/Algobut";
+import Nav from "./components/Nav/Nav";
+import Visualizer from "./components/Visualizer/Visualizer";
+import Inputs from "./components/Inputs/Input"
+import Heading from "./components/Heading/Heading";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav/>    
     </div>
   );
 }
-
 export default App;
