@@ -8,21 +8,17 @@ function Nav() {
   const [arr,setArr] = useState([]);
 
   function handleChange(event) {
-    console.log(event.target.value);
     setLen(event.target.value);
   }
 
   function generateArray(){
+    const arr=[];
      for(var i=0;i<len;i++)
      {
-       
-      let entry=Math.floor(Math.random() * 65)+10;
-      setArr(arr.push(entry));
-      //setArr({arr:[...arr,entry]});
-      //setArr()
-      console.log(entry)
+      arr.push(Math.floor(Math.random() * 65)+20);
      
     }
+    setArr(arr);
   }
   return (
     <Container>
@@ -43,9 +39,7 @@ function Nav() {
 
       <Bars>
           {arr.map((value,index) =>(
-            <div className='arr-bar' key={index}>
-                <h1>{value}</h1> 
-            </div>
+            <div className='arr-bar' style={{height:`${value}px`,width:`50px`,backgroundColor:`black`,margin:`0.15%`}} key={index} ></div>
           ))}
       </Bars>       
     </Container>  
@@ -68,5 +62,7 @@ align-items: center;
 `
 
 const Bars=styled.div`
-
+  align-items: center;
+  display: flex;
+  margin-top: auto; 
 `
