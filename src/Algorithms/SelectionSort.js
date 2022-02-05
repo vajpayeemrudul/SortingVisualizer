@@ -1,4 +1,4 @@
-function insertion(arr)
+function selection(arr)
 {
    const copy=[...arr];
    for(let i=0;i<copy.length;i++)
@@ -17,4 +17,4 @@ function insertion(arr)
    }
    return copy;
 }
-export default insertion;
+export default selection;

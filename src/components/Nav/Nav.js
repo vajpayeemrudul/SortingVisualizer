@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { Button } from 'react-bootstrap';
+import {bubble,selection,insertion,msort} from '../../Algorithms/Algrithms';
 import styled from "styled-components";
 
 function Nav() {
@@ -20,6 +21,33 @@ function Nav() {
     }
     setArr(arr);
   }
+
+  function bvis()
+  {
+        const nums=bubble(arr);
+        setArr(nums);
+  }
+
+  function svis(){
+    const nums=selection(arr);
+    setArr(nums);
+  }
+
+  function ivis(){
+    const nums=insertion(arr);
+    setArr(nums);
+  }
+
+  function mvis()
+  {
+    const nums=msort(arr);
+    setArr(nums);
+  }
+
+  function qvis(){
+
+  }
+
   return (
     <Container>
       <Menu>
@@ -41,7 +69,14 @@ function Nav() {
           {arr.map((value,index) =>(
             <div className='arr-bar' style={{height:`${value}px`,width:`50px`,backgroundColor:`black`,margin:`0.15%`}} key={index} ></div>
           ))}
-      </Bars>       
+      </Bars>
+      <Algob>
+         <button onClick={bvis}>Bubble</button>
+         <button onClick={svis}>Selection</button>
+         <button onClick={ivis}>Insertion</button>
+         <button onClick={mvis}>Merge</button>
+         <button onClick={qvis}>Quick</button>
+      </Algob>       
     </Container>  
   )
 }
@@ -65,4 +100,8 @@ const Bars=styled.div`
   align-items: center;
   display: flex;
   margin-top: auto; 
+`
+const Algob=styled.div`
+  display:flex;
+  padding: 0,20px;
 `
