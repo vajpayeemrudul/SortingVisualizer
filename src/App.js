@@ -8,7 +8,8 @@ import Heading from "./components/Heading/Heading";
 function App() {
   return (
     <div className="App">
-      <Nav/>    
+      <Nav/>
+      <Algobut/>    
     </div>
   );
 }
