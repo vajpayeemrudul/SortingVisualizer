@@ -60,7 +60,6 @@ function msort(arr)
     mergesort(copy,0,copy.length-1);
     return copy;
 }
-export default msort;
 
 function mergesort(arr,l,r)
 {
